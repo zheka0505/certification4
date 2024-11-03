@@ -14,7 +14,7 @@ public class SwagLabsTests {
     CompletePage completePage;
 
     @BeforeAll
-    public static void setUpGlobal(){
+    public static void setUpGlobal() {
         Configuration.baseUrl = GettingConfData.BASE_URL;
     }
 
@@ -45,18 +45,18 @@ public class SwagLabsTests {
     }
 
     @Test
-        @DisplayName("e2e-сценарий под пользователем standard_user")
-        @Tag("positive")
-        public void e2eStandardUser() {
-            loginPage.login(GettingConfData.STANDARD_USER_NAME, GettingConfData.PASSWORD);
-            productsPage.addToCart();
-            productsPage.header.goToCart();
-            cartPage.checkItemsInCartNumberShouldBe(3);
-            cartPage.checkout();
-            checkoutPage.fillOutCheckoutForm(GettingConfData.FIRST_NAME, GettingConfData.LAST_NAME, GettingConfData.POSTAL_CODE);
-            checkoutPage.checkOfTotalPrice();
-            checkoutPage.finish();
-            completePage.checkComplete();
+    @DisplayName("e2e-сценарий под пользователем standard_user")
+    @Tag("positive")
+    public void e2eStandardUser() {
+        loginPage.login(GettingConfData.STANDARD_USER_NAME, GettingConfData.PASSWORD);
+        productsPage.addToCart();
+        productsPage.header.goToCart();
+        cartPage.checkItemsInCartNumberShouldBe(3);
+        cartPage.checkout();
+        checkoutPage.fillOutCheckoutForm(GettingConfData.FIRST_NAME, GettingConfData.LAST_NAME, GettingConfData.POSTAL_CODE);
+        checkoutPage.checkOfTotalPrice();
+        checkoutPage.finish();
+        completePage.checkComplete();
     }
 
     @Test

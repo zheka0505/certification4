@@ -27,8 +27,8 @@ public class ProductsPage {
     }
 
     @Step("Проверяем что перешли на страницу магазина, тем что нашли элемент Products")
-    public void checkOfSuccessfulLogin(){
-    assertEquals("Products", getProductsText());
+    public void checkOfSuccessfulLogin() {
+        assertEquals("Products", getProductsText());
     }
 
     @Step("Добавляем товары в корзину")

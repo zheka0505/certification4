@@ -12,7 +12,7 @@ public class CompletePage {
 
     @Step("Проверям, что оформление заказа успешно завершено")
     public void checkComplete() {
-        assertEquals("Thank you for your order!",finishButtonLocator.text());
+        assertEquals("Thank you for your order!", finishButtonLocator.text());
 
     }
 

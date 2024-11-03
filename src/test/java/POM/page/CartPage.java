@@ -24,12 +24,12 @@ public class CartPage {
     private SelenideElement checkoutButtonLocator = $("#checkout");
     private SelenideElement cartItemsListLocator = $(".cart_list");
 
-        public int countItemsInCart() {
+    public int countItemsInCart() {
         cartItemsLocator.shouldHave(size(3));
         return cartItemsLocator.size();
     }
 
-    @Step("Проверяем, что в корзине лежит {x} товаров")
+    @Step("Проверяем, что в корзине лежит {x} товара")
     public void checkItemsInCartNumberShouldBe(int x) {
         takeScreen(cartItemsListLocator);
         assertEquals(x, countItemsInCart());
